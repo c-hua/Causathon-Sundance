@@ -17,3 +17,5 @@
 //= require angular-animate
 //= require angular-resource
 //= require_tree .
+
+$(function(){ $(document).foundation(); });

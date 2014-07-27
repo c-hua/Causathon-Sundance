@@ -1,0 +1,63 @@
+[ {"resources": 
+	[ 
+	{
+        "ID": 1,
+        "Organization":"Alliance of Women Directors",
+        "Resource":"AWD Membership",
+        "Description":"The Alliance of Women Directors is an active community of professional women directors and hosts bi-weekly and monthly Mixers, Networking Events, Living Room Chats and Screenings for its members.",
+        "Address":"Los Angeles, CA",
+        "Categories":
+		{
+			"Category":	
+			[
+			 "Networking and Community", 
+			 "Screenings and Festivals" 
+			]
+		},
+        "Platforms":
+		{
+			"Platform":
+			[
+				"Film",
+				"Television",
+				"Commercials", 
+				"Digital"
+			]
+		},
+        "Supportings":
+		{
+			"Supporting":
+			[ 
+				"Documentary", 
+				"Narrative",  
+				"Experimental", 
+				"Animation", 
+				"Short Documentary",
+				"Short Narrative" 
+			]
+		},
+        "Gender":"Women",
+        "URL":"http://www.allianceofwomendirectors.org/",
+        "Location":"Los Angeles, CA",
+        "Application_Type":"Open Application",
+        "Deadlines":"",
+        "Additional":"",
+        "Production_Stages":
+		{
+			"Production_Stage":
+			[ 
+				"Development",
+				"Production", 
+				"Post-Production", 
+				"Completed Projects" 
+			]
+		},
+        "Cost":"$80 annual membership fee",
+        "Targeting":"Directors",
+        "EthnicitySpecific":"No",
+        "Ethnicity":"",
+        "Picture":"Alliance%20of%20Women%20Directors.eps"
+           } 
+	  ]
+	}
+]
