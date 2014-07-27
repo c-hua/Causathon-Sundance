@@ -15,7 +15,7 @@
           <td class="links">
             <!-- ng-hide allows us to hide elements until the statement becomes false. -->
             <div ng-hide="resource.editing">
-                <strong>{{resource.topic}}</strong><br>
+                <strong>{{resource.organization}}</strong><br>
                 <a href="{{resource.url}}" target="_blank">
                   <!-- target "_blank" makes the link open in a new tab -->
                   {{resource.url}}</a> <br>
@@ -23,9 +23,9 @@
             <!-- ng-show hides the elements until the statement is true. ng-submit tells the submit button which function to run.   -->
               <form ng-show="resource.editing" ng-submit="updateResource(resource);" class="form-group">
 
-                <label for="topic">Topic:</label>
+                <label for="organization">Organization:</label>
                 <!-- ng-model ties the input box to the resource.topic -->
-                <input ng-model="resource.topic" type="text" name="topic" class="form-control" placeholder="Topic">
+                <input ng-model="resource.organization" type="text" name="organization" class="form-control" placeholder="Organization">
 
                 <label for="url">URL:</label>
 
@@ -40,15 +40,15 @@
               </form>
             <div ng-show="resource.details">
               <div>{{resource.description}}</div>
-              <div>Created by {{resource.user.name}}</div> 
+         <!--      <div>Created by {{resource.user.name}}</div>  -->
               <div></div>
             </div>
           </td>
           <td class="show">
-              <span ng-hide="resource.details">
+              <span ng-hide="resource.description">
                 <a ng-click="showResource(resource);" class="btn btn-info" id="showicon"> <%=image_tag "show.png", class: "icon"%></a>
               </span>
-              <span ng-show="resource.details">
+              <span ng-show="resource.description">
                 <a ng-click="hideResource(resource);" class="btn btn-info"> <%=image_tag "hide.png", class: "icon"%></a>
               </span>
           </td>
