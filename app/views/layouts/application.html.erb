@@ -45,78 +45,100 @@
       </ul>
     </div>
   
+    <div id="body">
+     <nav class="filters">
+      <ul>
+        <li>
+          <a href="#">Locations</a>
+          <img class="arrow" src="<%= asset_path( 'rightarrow.png' ) %>">
+        </li>
+        <li>
+          <a href="#">Gender</a>
+          <img class="arrow" src="<%= asset_path( 'rightarrow.png' ) %>">
+        </li>
+      </ul>
+      <ul class="subNav">
+        <li><a href="#">Los Angeles, CA</a></li>
+        <li><a href="#">New York, NY</a></li>
+      </ul>
+      <ul class="subNav">
+        <li><a href="#">Male</a></li>
+        <li><a href="#">Female</a></li>
+      </ul>
+    </nav>
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <section class="top-bar-section samplelogo">
+              <!-- Left Nav Section -->
+              <ul class="left white">
 
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <section class="top-bar-section samplelogo">
-            <!-- Left Nav Section -->
-            <ul class="left white">
+                  <li>
+                      <!-- this is the about page pop up bow below -->
+                      <a href="#" class="nblink" data-reveal-id="myModal"><strong>About</strong></a>
+                      <div id="myModal" class="reveal-modal" data-reveal>
+                      <h2>sundance </h2>
+                      <a class="close-reveal-modal">&#215;</a>
+                      </div>
+                  </li>
+                  <% if current_user %>
 
-                <li>
-                    <!-- this is the about page pop up bow below -->
-                    <a href="#" class="nblink" data-reveal-id="myModal"><strong>About</strong></a>
-                    <div id="myModal" class="reveal-modal" data-reveal>
-                    <h2>sundance </h2>
+                  <li>
+                      <!-- this is an attempt at a new resource page! -->
+                      <a href="#" class="nblink" data-reveal-id="myModal1"><strong>New Organization</strong></a>
+                      <div id="myModal1" class="reveal-modal" data-reveal>
+                      <div ng-show="current_user == <%= current_user ? current_user : !current_user %>"> 
+                      <h3>New Resource:</h3>
+                          <form name="form" ng-submit="saveResource();" class="form-group" >
+                                <label for="organization">Organization:</label>
+                                <input ng-model="newResource.organization" type="text" name="organization" class="form-control" placeholder="Organization">
+                                <label for="url">URL:</label>
+                                <input ng-model="newResource.url" type="url" name="url" class="form-control" placeholder="http://" >
+                                <label for="description">Tags:</label>
+                                <input ng-model="newResource.description" type="text" name="description" class="form-control" placeholder="Tags"/></textarea>
+                                <!-- <input ng-model="newResource.description" name="description" class="form-control"placeholder="Description"> --><br>
+                                <input type="submit" value="Add New Resource!" class="btn btn-primary">
+                          </form>
+                    </div>
                     <a class="close-reveal-modal">&#215;</a>
                     </div>
-                </li>
-                <% if current_user %>
+                  </li>
+                  <% end %>
+              </ul>
 
-                <li>
-                    <!-- this is an attempt at a new resource page! -->
-                    <a href="#" class="nblink" data-reveal-id="myModal1"><strong>New Organization</strong></a>
-                    <div id="myModal1" class="reveal-modal" data-reveal>
-                    <div ng-show="current_user == <%= current_user ? current_user : !current_user %>"> 
-                    <h3>New Resource:</h3>
-                        <form name="form" ng-submit="saveResource();" class="form-group" >
-                              <label for="organization">Organization:</label>
-                              <input ng-model="newResource.organization" type="text" name="organization" class="form-control" placeholder="Organization">
-                              <label for="url">URL:</label>
-                              <input ng-model="newResource.url" type="url" name="url" class="form-control" placeholder="http://" >
-                              <label for="description">Tags:</label>
-                              <input ng-model="newResource.description" type="text" name="description" class="form-control" placeholder="Tags"/></textarea>
-                              <!-- <input ng-model="newResource.description" name="description" class="form-control"placeholder="Description"> --><br>
-                              <input type="submit" value="Add New Resource!" class="btn btn-primary">
-                        </form>
-                  </div>
-                  <a class="close-reveal-modal">&#215;</a>
-                  </div>
-                </li>
+                <!-- Right Nav Section -->
+              <ul class="right">
+                <% if !current_user %>
+                  <li>
+                    <a href="#" data-reveal-id="myModal3"><strong>Sign In</strong></a>
+                      <div id="myModal3" class="reveal-modal" data-reveal>
+                        <%= render :partial => 'sessions/new' %>
+                        <a class="close-reveal-modal">&#215;</a>
+                      </div>
+                  </li>
                 <% end %>
-            </ul>
+                <% if current_user %>
+                  <li>
+                    <%= link_to "Sign Out", sessions_path, :method => :delete , style: 'font-weight:bold;'%>
+                  </li>
+                <% end %>
+                <% if !current_user %>
 
-              <!-- Right Nav Section -->
-            <ul class="right">
-              <% if !current_user %>
-                <li>
-                  <a href="#" data-reveal-id="myModal3"><strong>Sign In</strong></a>
-                    <div id="myModal3" class="reveal-modal" data-reveal>
-                      <%= render :partial => 'sessions/new' %>
+                  <li>
+                    <a href="#" data-reveal-id="myModal6"><strong>Sign Up</strong></a>
+                    <div id="myModal6" class="reveal-modal" data-reveal>
+                      <%= render :partial => 'users/new' %>
                       <a class="close-reveal-modal">&#215;</a>
                     </div>
-                </li>
-              <% end %>
-              <% if current_user %>
-                <li>
-                  <%= link_to "Sign Out", sessions_path, :method => :delete , style: 'font-weight:bold;'%>
-                </li>
-              <% end %>
-              <% if !current_user %>
+                  </li>
+                  <% end %>
+              </ul>
+              </div>
+          </div>
+        </section>
+  </nav>
 
-                <li>
-                  <a href="#" data-reveal-id="myModal6"><strong>Sign Up</strong></a>
-                  <div id="myModal6" class="reveal-modal" data-reveal>
-                    <%= render :partial => 'users/new' %>
-                    <a class="close-reveal-modal">&#215;</a>
-                  </div>
-                </li>
-                <% end %>
-            </ul>
-            </div>
-</div>
-</section>
-</nav>
+  </div>
 
 </div>
 <!-- nav bar above - no formatted yet! -->

@@ -91,13 +91,17 @@ header {
 	width: 20%;
 	display: inline-block;
 	vertical-align: top;
-	margin-right: 5%;
 
 	ul {
 		li {
 			padding: 5px 0;
 		}
 	}
+}
+
+#body {
+	float: right;
+	width: 75%;
 }
 
 a {
@@ -114,6 +118,73 @@ a {
 h3 {
 	padding: 5px 0;
 }
+
+// nav
+nav.filters {
+	float: left;
+
+	ul {
+		text-align: left;
+
+		li {
+			display: inline-block;
+			vertical-align: top;
+			padding-left: 10px;
+			padding-right: 3rem;
+
+			a {
+				font-size: 16px;
+			}
+
+			.arrow {
+				width: 20px;
+				position: relative;
+				bottom: -5px;
+				margin-left: 10px;
+			}
+
+			.rotate {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	.search {
+		float: right;
+		padding-right: 0;
+
+		img { width: 25px; }
+	}
+
+	.subNav {
+		display: none;
+		margin: 20px 10px;
+		background: rgba(255,255,255, 0.9);
+		padding: 10px;
+
+		li {
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 10px;
+			padding: 0;
+
+			a {
+				padding: 10px;
+				background: #aaa;
+				border-radius: 10px;
+				font-size: 0.75rem;
+				text-transform: uppercase;
+
+				&:hover {
+					color: #fff;
+					background: #000;
+				}
+			}
+		}
+	}
+}
+
+	
 
 // Style
 .wrapper {
@@ -135,68 +206,8 @@ h3 {
 		display: inline-block;
 		vertical-align: top;
 
-		nav {
-			text-transform: uppercase;
-
-			ul {
-				text-align: left;
-
-				li {
-					display: inline-block;
-					vertical-align: top;
-					padding-left: 10px;
-					padding-right: 3rem;
-
-					a {
-						font-size: 16px;
-					}
-
-					.arrow {
-						width: 20px;
-						position: relative;
-						bottom: -5px;
-						margin-left: 10px;
-					}
-
-					.rotate {
-						transform: rotate(90deg);
-					}
-				}
-			}
-
-			.search {
-				float: right;
-				padding-right: 0;
-
-				img { width: 25px; }
-			}
-		}
-
-		.subNav {
-			display: none;
-			margin: 20px 10px;
-			background: rgba(255,255,255, 0.9);
-			padding: 10px;
-
-			li {
-				padding-left: 0;
-				display: inline-block;
-				vertical-align: top;
-				margin: 0 10px;
-
-				a {
-					padding: 10px;
-					background: #aaa;
-					border-radius: 10px;
-					font-size: 0.75rem;
-
-					&:hover {
-						color: #fff;
-						background: #000;
-					}
-				}
-			}
-		}
+		
+		
 
 		#content {
 			margin-top: 20px;
