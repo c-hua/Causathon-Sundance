@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  created_at: 2014-07-27 00:09:30
+  updated: 2014-07-27 00:09:30
+  id: 1
+  organization: MyString
+  resource: MyString
+  description: MyString
+  location: MyString
+  category: MyString
+  supporting: MyString
+  gender: MyString
+  url: MyString
+  location: MyString
+  application_type: MyString
+  deadline: MyString
+  additional: MyString
+  production_stage: MyString
+  cost: MyString
+  targeting: MyString
+  ethnicity-specific: MyString
+  ethnicity: MyString
+  picture: MyString
+
+two:
+  created_at: 2014-07-27 00:09:30
+  updated: 2014-07-27 00:09:30
+  id: 1
+  organization: MyString
+  resource: MyString
+  description: MyString
+  location: MyString
+  category: MyString
+  supporting: MyString
+  gender: MyString
+  url: MyString
+  location: MyString
+  application_type: MyString
+  deadline: MyString
+  additional: MyString
+  production_stage: MyString
+  cost: MyString
+  targeting: MyString
+  ethnicity-specific: MyString
+  ethnicity: MyString
+  picture: MyString

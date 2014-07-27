@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: sundance_production
-  username: sundance
-  password: <%= ENV['SUNDANCE_DATABASE_PASSWORD'] %>
+  username: 
+  password: 
