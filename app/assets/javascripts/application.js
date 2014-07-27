@@ -18,4 +18,12 @@
 //= require angular-resource
 //= require_tree .
 
+$(function() {
+	$("nav li").click(function() {
+		var navIndex = $(this).index();
+		$(".subNav").eq(navIndex).slideDown();
+		$(this).children("a").addClass("active");
+		$(this).children(".arrow").addClass("rotate");		
+	});
+});
 $(function(){ $(document).foundation(); });
