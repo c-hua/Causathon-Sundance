@@ -20,16 +20,23 @@
 
 $(function() {
 	$("ul.nav > li").click(function(e) {
-		var navIndex = $(this).index();
-		$(".expanded").eq(navIndex).slideUp().removeClass("expanded");
-		$(".arrow").eq(navIndex).removeClass("rotate");
-		$(".subNav").eq(navIndex).slideDown().addClass("expanded");
-		$(this).addClass("active");
-		$(this).children(".arrow").addClass("rotate");
-	});
-
-	$(".active").click(function(e) {
-		$(".expanded").slideToggle();
+		if ($(this).hasClass("active")) {
+			console.log("active");
+			$(".expanded").slideUp().removeClass("expanded");
+			$(this).removeClass("active");
+			$(".arrow").removeClass("rotate");
+		}
+		else {
+			console.log("unactive");
+			var navIndex = $(this).index();
+			$(".active").removeClass("active");
+			$(".expanded").slideUp().removeClass("expanded");
+			$(".arrow").removeClass("rotate");
+			$(".subNav").eq(navIndex).slideDown().addClass("expanded");
+			$(this).addClass("active");
+			$(this).children(".arrow").addClass("rotate");
+		}
+		e.stopPropagation();
 	});
 
 	// $(".active").click(function() {
