@@ -19,11 +19,25 @@
 //= require_tree .
 
 $(function() {
-	$("nav li").click(function() {
+	$("ul.nav > li").click(function(e) {
 		var navIndex = $(this).index();
-		$(".subNav").eq(navIndex).slideDown();
-		$(this).children("a").addClass("active");
-		$(this).children(".arrow").addClass("rotate");		
+		$(".expanded").eq(navIndex).slideUp().removeClass("expanded");
+		$(".arrow").eq(navIndex).removeClass("rotate");
+		$(".subNav").eq(navIndex).slideDown().addClass("expanded");
+		$(this).addClass("active");
+		$(this).children(".arrow").addClass("rotate");
+	});
+
+	$(".active").click(function(e) {
+		$(".expanded").slideToggle();
+	});
+
+	// $(".active").click(function() {
+	// 	$(".expanded").slideUp().removeClass("expanded").stop();
+	// });
+
+	$("nav.filters .subNav li a").click(function() {
+		$(this).toggleClass("selected");
 	});
 });
 $(function(){ $(document).foundation(); });
