@@ -19,10 +19,11 @@
 //= require_tree .
 
 $(function() {
+	// Sub Nav
 	$("ul.nav > li").click(function(e) {
 		if ($(this).hasClass("active")) {
 			console.log("active");
-			$(".expanded").slideUp().removeClass("expanded");
+			$(".expanded").hide().removeClass("expanded");
 			$(this).removeClass("active");
 			$(".arrow").removeClass("rotate");
 		}
@@ -30,9 +31,9 @@ $(function() {
 			console.log("unactive");
 			var navIndex = $(this).index();
 			$(".active").removeClass("active");
-			$(".expanded").slideUp().removeClass("expanded");
+			$(".expanded").hide().removeClass("expanded");
 			$(".arrow").removeClass("rotate");
-			$(".subNav").eq(navIndex).slideDown().addClass("expanded");
+			$(".subNav").eq(navIndex).show().addClass("expanded");
 			$(this).addClass("active");
 			$(this).children(".arrow").addClass("rotate");
 		}
@@ -43,4 +44,5 @@ $(function() {
 		$(this).toggleClass("selected");
 	});
 });
+
 $(function(){ $(document).foundation(); });

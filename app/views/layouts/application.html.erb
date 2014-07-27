@@ -57,14 +57,16 @@
           <img class="arrow" src="<%= asset_path( 'rightarrow.png' ) %>">
         </li>
       </ul>
-      <ul class="subNav">
-        <li><a href="#">Los Angeles, CA</a></li>
-        <li><a href="#">New York, NY</a></li>
-      </ul>
-      <ul class="subNav">
-        <li><a href="#">Male</a></li>
-        <li><a href="#">Female</a></li>
-      </ul>
+      <div class="filterURL">
+        <ul class="subNav">
+          <li><a href="#">Los Angeles, CA</a></li>
+          <li><a href="#">New York, NY</a></li>
+        </ul>
+        <ul class="subNav">
+          <li><a href="#">Male</a></li>
+          <li><a href="#">Female</a></li>
+        </ul>
+      </div>
     </nav>
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
@@ -141,11 +143,31 @@
         </section>
   </nav>
   <ul class="organizations">
+    <li class="LA">
+      <div class="copy">
+        <h4>American Film Institute</h4>
+        <h5>Has Class LA</h5>
+      </div>
+      <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
+    </li>
     <li>
       <div class="copy">
         <h4>American Film Institute</h4>
-        <h5>AFI Directing Workshop for Women (AFI DWW)</h5>
-        <p>
+        <h5>Does Not Have Class LA</h5>
+      </div>
+      <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
+    </li>
+    <li class="LA">
+      <div class="copy">
+        <h4>American Film Institute</h4>
+        <h5>Has Class LA</h5>
+      </div>
+      <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
+    </li>
+    <li class="NY">
+      <div class="copy">
+        <h4>American Film Institute</h4>
+        <h5>Has Class NY</h5>
       </div>
       <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
     </li>
@@ -153,7 +175,6 @@
       <div class="copy">
         <h4>American Film Institute</h4>
         <h5>AFI Directing Workshop for Women (AFI DWW)</h5>
-        <p>
       </div>
       <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
     </li>
@@ -161,31 +182,6 @@
       <div class="copy">
         <h4>American Film Institute</h4>
         <h5>AFI Directing Workshop for Women (AFI DWW)</h5>
-        <p>
-      </div>
-      <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
-    </li>
-    <li>
-      <div class="copy">
-        <h4>American Film Institute</h4>
-        <h5>AFI Directing Workshop for Women (AFI DWW)</h5>
-        <p>
-      </div>
-      <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
-    </li>
-    <li>
-      <div class="copy">
-        <h4>American Film Institute</h4>
-        <h5>AFI Directing Workshop for Women (AFI DWW)</h5>
-        <p>
-      </div>
-      <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
-    </li>
-    <li>
-      <div class="copy">
-        <h4>American Film Institute</h4>
-        <h5>AFI Directing Workshop for Women (AFI DWW)</h5>
-        <p>
       </div>
       <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
     </li>
