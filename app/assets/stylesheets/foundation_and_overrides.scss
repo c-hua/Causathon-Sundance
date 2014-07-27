@@ -1299,3 +1299,8 @@ $primary-color: #852e8a;
 // $range-slider-handle-cursor: pointer;
 
 @import 'foundation';
+
+.top-bar {
+	display: inline-block;
+	vertical-align: top;
+}
