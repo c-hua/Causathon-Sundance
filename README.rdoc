@@ -1,28 +1,16 @@
-== README
+SUNDANCE Women Filmmakers Database for Brand New's Causathon at General Assembly.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+July 27, 2014
 
-Things you may want to cover:
+Built with Ruby on Rails, PostgreSQL, Angular.js, Zurb Foundation, jQuery, Javascript, HTML/CSS, and BCrypt. 
 
-* Ruby version
+Team Members:
+Christie Hua
+Matt Billings
+Jeffrey Brick
+Courtney Clinch
 
-* System dependencies
+Special Thanks to:
+June Kim
+Jessica P.L.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
