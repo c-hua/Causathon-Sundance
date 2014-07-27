@@ -39,10 +39,6 @@ $(function() {
 		e.stopPropagation();
 	});
 
-	// $(".active").click(function() {
-	// 	$(".expanded").slideUp().removeClass("expanded").stop();
-	// });
-
 	$("nav.filters .subNav li a").click(function() {
 		$(this).toggleClass("selected");
 	});
