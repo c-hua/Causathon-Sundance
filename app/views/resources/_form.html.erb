@@ -1,0 +1,30 @@
+<%= form_for @resource do |f| %>
+<div class="form_for">
+  <div class="small form" id="form_topic">
+    <%= f.text_field :topic, placeholder: "Topic", class: "form-control" %>
+  </div>
+  <div class="small form" id="form_url">
+    <%= f.url_field :url, placeholder: "Link", class: "form-control"%>
+  </div>
+  <div class="small form" id="form_description">
+    <%= f.text_field :description, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+  <%= f.submit %> <br/>
+  <%= link_to 'Back', resources_path %>
+  <%end %>
+
+  <form>
+
+
+<!-- have yet to style / make the below work! -->
+
+  <div class="row collapse">
+    <div class="small-3 large-2 columns">
+      <span class="prefix">http://</span>
+    </div>
+    <div class="small-9 large-10 columns">
+      <input type="text" placeholder="Enter your URL...">
+    </div>
+   </div>
+</form>

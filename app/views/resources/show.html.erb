@@ -1,2 +1,37 @@
-<h1>Resources#show</h1>
-<p>Find me in app/views/resources/show.html.erb</p>
+<div class="container">
+	<h1 id="title">SUNDANCE</h1>
+	<% @resources.each do |r|%>
+	<div class="big">
+		<div class="small" id="name">
+			<strong><p class="name"><%=r.organization%></p></strong>
+		</div>
+		
+		<div class="small" id="url">
+			<p>url</p>
+			<p class="content"><strong><%= link_to r.description, r.category, r.platform, r.supporting, r.gender, r.url, r.location, r.application_type, r.deadlines, r.additional, r.production_stage, r.cost, r.targeting, r.ethnicityspecific, r.address, r.ethnicity, r.picture, target: '_blank' %></strong></p>
+		</div>
+		
+		<div class="small" id="description">
+			<p>Description</p>
+			<p class="content"><strong><%= r.description %></strong></p>
+		</div>
+
+
+		<% if current_user %>
+			<%=link_to 'Edit', edit_resource_path(r)%>
+			<%=link_to 'Delete', resource_path(r), method: :delete, data: {confirm:'Are you sure'} %>
+			<br/>
+		<% end %>
+
+		</div>
+	<% end %>
+	<% if current_user %>
+		<%=link_to 'New', new_resource_path%>
+	<% end %>
+ </div>
+<div class="main">
+  <h1>Here are the Sundance resources</h1>
+
+  <div id="resources-destination"></div>
+
+</div>

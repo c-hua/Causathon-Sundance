@@ -1,14 +1,111 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sundance</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title><%= content_for?(:title) ? yield(:title) : "BLINK" %></title>
+<link rel="shortcut icon" href="tab.png">
+
+
+<%= stylesheet_link_tag    "application" %>
+<%= javascript_include_tag "vendor/modernizr" %>
+<%= csrf_meta_tags %>
+</head>
+
+<body>
+<div ng-app="resource-app" class="container">
+  <div ng-controller="ResourceCtrl">
+
+
+
+
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <section class="top-bar-section blinklogo">
+            <!-- Left Nav Section -->
+            <ul class="left white">
+
+                <li>
+                    <!-- this is the about page pop up bow below -->
+                    <a href="#" class="nblink" data-reveal-id="myModal"><strong>About</strong></a>
+                    <div id="myModal" class="reveal-modal" data-reveal>
+                    <h2>sundance </h2>
+                    <a class="close-reveal-modal">&#215;</a>
+                    </div>
+                </li>
+                <% if current_user %>
+
+                <li>
+                    <!-- this is an attempt at a new resource page! -->
+                    <a href="#" class="nblink" data-reveal-id="myModal1"><strong>New Link</strong></a>
+                    <div id="myModal1" class="reveal-modal" data-reveal>
+                    <div ng-show="current_user == <%= current_user ? current_user : !current_user %>"> 
+                    <h3>New Resource:</h3>
+                        <form name="form" ng-submit="saveResource();" class="form-group" >
+                              <label for="topic">Topic:</label>
+                              <input ng-model="newResource.topic" type="text" name="topic" class="form-control" placeholder="Topic">
+                              <label for="url">URL:</label>
+                              <input ng-model="newResource.url" type="url" name="url" class="form-control" placeholder="http://" >
+                              <label for="description">Tags:</label>
+                              <input ng-model="newResource.description" type="text" name="description" class="form-control" placeholder="Tags"/></textarea>
+                              <!-- <input ng-model="newResource.description" name="description" class="form-control"placeholder="Description"> --><br>
+                              <input type="submit" value="Add New Resource!" class="btn btn-primary">
+                        </form>
+                  </div>
+                  <a class="close-reveal-modal">&#215;</a>
+                  </div>
+                </li>
+                <% end %>
+            </ul>
+
+              <!-- Right Nav Section -->
+            <ul class="right">
+              <% if !current_user %>
+                <li>
+                  <a href="#" data-reveal-id="myModal3"><strong>Sign In</strong></a>
+                    <div id="myModal3" class="reveal-modal" data-reveal>
+                      <%= render :partial => 'sessions/new' %>
+                      <a class="close-reveal-modal">&#215;</a>
+                    </div>
+                </li>
+              <% end %>
+              <% if current_user %>
+                <li>
+                  <%= link_to "Sign Out", sessions_path, :method => :delete , style: 'font-weight:bold;'%>
+                </li>
+              <% end %>
+              <% if !current_user %>
+
+                <li>
+                  <a href="#" data-reveal-id="myModal6"><strong>Sign Up</strong></a>
+                  <div id="myModal6" class="reveal-modal" data-reveal>
+                    <%= render :partial => 'users/new' %>
+                    <a class="close-reveal-modal">&#215;</a>
+                  </div>
+                </li>
+                <% end %>
+            </ul>
+
+</section>
+</nav>
+<!-- nav bar above - no formatted yet! -->
+
+
+<!-- <a href="#" data-dropdown="drop1" class="button dropdown">Dropdown Button</a><br>
+<ul id="drop1" data-dropdown-content class="f-dropdown">
+<li><%#=  session[:remember_token] %></li>
+<#% if !current_user %>
+<li><%#= link_to "Sign Up", new_user_path %></li>
+<li><%#= link_to "Sign In", new_sessions_path %></li>
+<#% else %>
+<li><%#= link_to "Sign Out", sessions_path, :method => :delete %></li>
+<#% end %>
+</ul> -->
+<%= javascript_include_tag "application" %>
 <%= yield %>
+
 
 </body>
 </html>

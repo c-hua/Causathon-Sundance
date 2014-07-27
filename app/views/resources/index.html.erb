@@ -1,2 +1,75 @@
-<h1>Resources#index</h1>
-<p>Find me in app/views/resources/index.html.erb</p>
+<!-- ng-app calls the angular application -->
+<div ng-app="resource-app" class="container">
+<!-- ng-controller calls the angular controller which is this case is ResourceCtrl -->
+  <div ng-controller="ResourceCtrl">
+
+     <div class="form-group">
+<!-- input creates a search box. ng-model tells the search box what to search, which in this case is searchResource. -->
+        <input ng-model="searchResource" type="text" class="form-control search" id="searchbar" placeholder="Search">
+      </div>
+<div class="scroll">
+    <table class="table">
+      <tbody id="resultsfield" >
+        <!-- ng-repeat loops through the data which in this case is resources. -->
+        <tr  class="resources" ng-repeat="resource in resources | filter:searchResource ">
+          <td class="links">
+            <!-- ng-hide allows us to hide elements until the statement becomes false. -->
+            <div ng-hide="resource.editing">
+                <strong>{{resource.topic}}</strong><br>
+                <a href="{{resource.url}}" target="_blank">
+                  <!-- target "_blank" makes the link open in a new tab -->
+                  {{resource.url}}</a> <br>
+            </div>
+            <!-- ng-show hides the elements until the statement is true. ng-submit tells the submit button which function to run.   -->
+              <form ng-show="resource.editing" ng-submit="updateResource(resource);" class="form-group">
+
+                <label for="topic">Topic:</label>
+                <!-- ng-model ties the input box to the resource.topic -->
+                <input ng-model="resource.topic" type="text" name="topic" class="form-control" placeholder="Topic">
+
+                <label for="url">URL:</label>
+
+                <input ng-model="resource.url" type="text" name="url" class="form-control" placeholder="http://">
+
+                <label for="description">Tags:</label>
+
+                <input ng-model="resource.description" type="text" name="description" class="form-control" placeholder="Tags"/></textarea>
+
+                <input type="submit" value="Update Resource!" class="btn btn-primary">
+
+              </form>
+            <div ng-show="resource.details">
+              <div>{{resource.description}}</div>
+              <div>Created by {{resource.user.name}}</div> 
+              <div></div>
+            </div>
+          </td>
+          <td class="show">
+              <span ng-hide="resource.details">
+                <a ng-click="showResource(resource);" class="btn btn-info" id="showicon"> <%=image_tag "show.png", class: "icon"%></a>
+              </span>
+              <span ng-show="resource.details">
+                <a ng-click="hideResource(resource);" class="btn btn-info"> <%=image_tag "hide.png", class: "icon"%></a>
+              </span>
+          </td>
+          <!-- ng-show will show elements when resource.user.id is equal to current_user.id. Inside the wickets is an if else statement. if there is a current user than log current_user.id or else its false.-->
+          <td class="edit" ng-show="resource.user_id == <%= current_user ? current_user.id : false%>" >
+              
+              <span ng-hide="resource.editing">
+                <a ng-click="editResource(resource);" class="btn btn-info"> <%=image_tag "edit.png", class: "icon"%> </a>
+              </span>
+              
+              <span ng-show="resource.editing">
+                <a ng-click="backResource(resource);" class="btn btn-info"> <%=image_tag "back.png", class: "icon"%> </a>
+              </span>
+
+          </td>
+          <td class="delete" ng-show="resource.user_id == <%= current_user ? current_user.id : false%>" >
+           <a ng-click="deleteResource(resource);" class="btn btn-info"><%=image_tag "delete.png", class: "icon"%></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+  </div>
+</div>
