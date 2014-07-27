@@ -10,6 +10,18 @@ var resourceApp = angular.module('resource-app', ['ngResource', 'mm.foundation']
 		defaults.common['Accept'] = 'application/json';
 }]);
 
+resourceApp.factory('User', ['$resource', function($resource) {
+	return $resource('/users/:id',
+		{id: '@id'},
+		{update: { method: 'PATCH'}});
+}]);
+
+resourceApp.factory('Resource', ['$resource', function($resource) {
+	return $resource('/resources/:id',
+		{id: '@id'},
+		{update: { method: 'PATCH'}});
+}]);
+
 resourceApp.factory('Resource', ['$resource', function($resource) {
 	return $resource('/resources/:id',
 		{id: '@id'},
