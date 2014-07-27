@@ -1,0 +1,11 @@
+<% if !current_user %>
+<h1>New User</h1>
+
+<%= form_for @user do |f| %>
+  Name: <%= f.text_field :name %>
+  Email: <%= f.text_field :email %>
+  Password: <%= f.password_field :password %>
+  
+  <%= f.submit %>
+<% end %>
+<%end%>

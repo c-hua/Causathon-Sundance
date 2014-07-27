@@ -1,7 +1,7 @@
 <%= form_for @resource do |f| %>
 <div class="form_for">
-  <div class="small form" id="form_topic">
-    <%= f.text_field :topic, placeholder: "Topic", class: "form-control" %>
+  <div class="small form" id="form_organization">
+    <%= f.text_field :organization, placeholder: "Organization", class: "form-control" %>
   </div>
   <div class="small form" id="form_url">
     <%= f.url_field :url, placeholder: "Link", class: "form-control"%>
@@ -9,6 +9,66 @@
   <div class="small form" id="form_description">
     <%= f.text_field :description, placeholder: "Tags", class: "form-control"%>
   </div>
+    <div class="small form" id="form_category">
+    <%= f.text_field :category, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+    <div class="small form" id="form_platform">
+    <%= f.text_field :platform, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+    <div class="small form" id="form_supporting">
+    <%= f.text_field :supporting, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+    <div class="small form" id="form_gender">
+    <%= f.text_field :gender, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+    <div class="small form" id="form_location">
+    <%= f.text_field :location, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+  <div class="small form" id="form_application_type">
+    <%= f.text_field :application_type, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+    <div class="small form" id="form_deadlines">
+    <%= f.text_field :deadlines, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+    <div class="small form" id="form_additional">
+    <%= f.text_field :additional, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+  <div class="small form" id="form_production_stage">
+    <%= f.text_field :production_stage, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+    <div class="small form" id="form_cost">
+    <%= f.text_field :cost, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+    <div class="small form" id="form_targeting">
+    <%= f.text_field :targeting, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+    <div class="small form" id="form_ethnicityspecific">
+    <%= f.text_field :ethnicityspecific, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+    <div class="small form" id="form_address">
+    <%= f.text_field :address, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+    <div class="small form" id="form_ethnicity">
+    <%= f.text_field :ethnicity, placeholder: "Tags", class: "form-control"%>
+  </div>
+
+<!--   <div class="small form" id="form_picture">
+    <%= f.text_field :picture, placeholder: "Tags", class: "form-control"%>
+  </div> -->
+
 
   <%= f.submit %> <br/>
   <%= link_to 'Back', resources_path %>

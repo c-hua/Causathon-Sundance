@@ -1,9 +1,5 @@
-
-
 <%= form_for :session, :url => sessions_path do |f| %>
 	Email: <%= f.email_field :email %>
 	Password: <%= f.password_field :password %>
 	<%= f.submit "login" %>
-	<% end %>
-
-<%=link_to 'Home', resources_path, style:"font-size:50px"%>
+<% end %>
