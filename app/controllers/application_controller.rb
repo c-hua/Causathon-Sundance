@@ -23,5 +23,5 @@ class ApplicationController < ActionController::Base
   def sign_in(user)
   	session[:remember_token] =user.id 
   	@current_user = user
-	end
+  end
 end
