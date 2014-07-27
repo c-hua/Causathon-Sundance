@@ -1303,6 +1303,9 @@ $primary-color: #852e8a;
 .top-bar {
 	float: right;
 	background: transparent;
+	margin-bottom: 0;
+	line-height: 16px;
+	height: 24px;
 }
 
 .top-bar-section li:not(.has-form) a:not(.button) {
@@ -1320,4 +1323,8 @@ $primary-color: #852e8a;
 
 .top-bar-section ul li {
 	background: white;
+}
+
+.top-bar-section ul li > a {
+	font-family: "Roboto", sans-serif;
 }

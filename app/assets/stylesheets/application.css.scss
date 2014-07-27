@@ -80,6 +80,11 @@ header {
 	max-width: 960px;
 }
 
+.wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
 .mainNav {
 	width: 100%;
 	margin: 0 auto;
@@ -121,7 +126,8 @@ h3 {
 
 // nav
 nav.filters {
-	float: left;
+	display: inline-block;
+	vertical-align: top;
 
 	ul {
 		text-align: left;
@@ -159,7 +165,6 @@ nav.filters {
 	.subNav {
 		display: none;
 		margin: 20px 10px;
-		background: rgba(255,255,255, 0.9);
 		padding: 10px;
 
 		li {
@@ -189,43 +194,36 @@ nav.filters {
 	}
 }
 
-	
+ul.organizations {
+	margin-top: 20px;
 
-// Style
-.wrapper {
-	max-width: 954px;
-	margin: 0 auto;
-	
-
-	
-
-
-
-	
-
-	
-
-	#container {
-		width: 70%;
-		height: 200px;
+	li {
 		display: inline-block;
 		vertical-align: top;
+		width: 33%;
+		height: 33%;
+		margin: 10px;
+		max-height: 200px;
+		max-width: 200px;
+		background: rgb(241,241,242);
+		text-align: center;
+		position: relative;
 
-		
-		
-
-		#content {
-			margin-top: 20px;
-
-			ul {
-				li {
-					width: 30%;
-					height: 180px;
-					margin: 10px;
-					background-color: gray;
-					display: inline-block;
-				}
-			}
+		img {
+			max-width: 100%;
+			margin: 0 auto;
+			position: absolute;
+			bottom: 0;
+			left: 0;
 		}
+	}
+}
+
+.search {
+	img {
+		width: 20px;
+		height: auto;
+		position: relative;
+		top: -2px;
 	}
 }
