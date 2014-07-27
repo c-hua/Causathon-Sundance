@@ -1301,6 +1301,23 @@ $primary-color: #852e8a;
 @import 'foundation';
 
 .top-bar {
-	display: inline-block;
-	vertical-align: top;
+	float: right;
+	background: transparent;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+	background: transparent;
+	color: #000;
+	line-height: 1rem;
+	font-size: 1rem;
+	padding: 5px 10px;
+
+	&:hover {
+		color: #ec1c24;
+		background: transparent;
+	}
+}
+
+.top-bar-section ul li {
+	background: white;
 }
