@@ -5,12 +5,8 @@ July 27, 2014
 Built with Ruby on Rails, PostgreSQL, Angular.js, Zurb Foundation, jQuery, Javascript, HTML/CSS, and BCrypt. 
 
 Team Members:
-Christie Hua
-Matt Billings
-Jeffrey Brick
-Courtney Clinch
+Christie Hua, Matt Billings, Jeffrey Brick & Courtney Clinch
 
 Special Thanks to:
-June Kim
-Jessica P.L.
+June Kim & Jessica P.L.
 
