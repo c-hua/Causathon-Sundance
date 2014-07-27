@@ -1,0 +1,169 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ // Includes
+// @import 'reset';
+
+// Variables
+$red: #ec1c24;
+
+body {
+	background: url('http://www.sundance.org/images/wrapper/SI13_bgtile.jpg');
+}
+
+.container {
+	width: 994px;
+	margin: 0 auto;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 16px;
+	height: 100%;
+	background: #fff;
+}
+
+header {
+	margin: 0 auto 20px;
+	width: 960px;
+}
+
+.mainNav {
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	padding: 20px 0;
+}
+
+// Style
+#wrapper {
+	max-width: 1024px;
+	margin: 0 auto;
+	
+
+	
+
+	a {
+		color: #000;
+		text-decoration: none;
+		font-size: 12px;
+		line-spacing: 26px;
+
+		&:hover {
+			color: $red;
+		}
+	}
+
+	h3 {
+		padding: 5px 0;
+	}
+
+	
+
+	#sidebar {
+		width: 20%;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 5%;
+
+		ul {
+			li {
+				padding: 5px 0;
+			}
+		}
+	}
+
+	#container {
+		width: 70%;
+		height: 200px;
+		display: inline-block;
+		vertical-align: top;
+
+		nav {
+			text-transform: uppercase;
+
+			ul {
+				text-align: left;
+
+				li {
+					display: inline-block;
+					vertical-align: top;
+					padding-left: 10px;
+					padding-right: 3rem;
+
+					a {
+						font-size: 16px;
+					}
+
+					.arrow {
+						width: 20px;
+						position: relative;
+						bottom: -5px;
+						margin-left: 10px;
+					}
+
+					.rotate {
+						transform: rotate(90deg);
+					}
+				}
+			}
+
+			.search {
+				float: right;
+				padding-right: 0;
+
+				img { width: 25px; }
+			}
+		}
+
+		.subNav {
+			display: none;
+			margin: 20px 10px;
+			background: rgba(255,255,255, 0.9);
+			padding: 10px;
+
+			li {
+				padding-left: 0;
+				display: inline-block;
+				vertical-align: top;
+				margin: 0 10px;
+
+				a {
+					padding: 10px;
+					background: #aaa;
+					border-radius: 10px;
+					font-size: 0.75rem;
+
+					&:hover {
+						color: #fff;
+						background: #000;
+					}
+				}
+			}
+		}
+
+		#content {
+			margin-top: 20px;
+
+			ul {
+				li {
+					width: 30%;
+					height: 180px;
+					margin: 10px;
+					background-color: gray;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
