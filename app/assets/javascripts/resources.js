@@ -44,7 +44,42 @@ resourceApp.controller('ResourceCtrl', ['$scope', 'Resource',
     {
         "ID": 1,
         "Organization": "Alliance of Women Directors",
-        "Category": ["Networking and Community", "Screenings and Festivals"],
+        "Categories": [
+            {
+                "Category": "Networking and Community"
+            },
+            {
+                "Category": "Screenings and Festivals"
+            }
+        ],
+        "Gender": "Women",
+        "URL": "http://www.allianceofwomendirectors.org/"
+    },
+    {
+        "ID": 2,
+        "Organization": "as;ldkfjaskdlf",
+        "Categories": [
+            {
+                "Category": "test"
+            },
+            {
+                "Category": "Screenings and Festivals"
+            }
+        ],
+        "Gender": "Women",
+        "URL": "http://www.allianceofwomendirectors.org/"
+    },
+    {
+        "ID": 3,
+        "Organization": "fdasd",
+        "Categories": [
+            {
+                "Category": "test"
+            },
+            {
+                "Category": "Screenings and Festivals"
+            }
+        ],
         "Gender": "Women",
         "URL": "http://www.allianceofwomendirectors.org/"
     }

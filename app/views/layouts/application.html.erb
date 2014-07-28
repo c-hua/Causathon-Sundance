@@ -23,16 +23,17 @@
       <img class="mainNav" src="<%= asset_path( 'mainnav.png' ) %>">
     </header>
 
-
     <div class="wrapper">
     <div id="sidebar">
       <h3>Categories</h3>
       <ul>
         <!-- <li ng-repeat="cat in categories"><a href="#">{{cat}}</a></li> -->
-        <li ng-repeat="t in tests"><a href="#"><div x-ng-repeat="c in Category">{{c}}</div></a></li>
+        <li ng-repeat="t in tests">
+          <a href="#" class="nest" ng-repeat="cat in t.Categories">{{cat.Category}}</a>
+        </li>
       </ul>
     </div>
-  
+
     <div id="body">
      <nav class="filters">
       <ul class="nav">
@@ -131,49 +132,13 @@
         </section>
   </nav>
   <ul id="organizations">
-    <li data-location="LA">
+    <li data-location="LA" ng-repeat="t in tests">
       <div class="copy">
-        <h4>American Film Institute</h4>
+        <h4>{{t.Organization}}</h4>
         <h5>Has Class LA</h5>
       </div>
       <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
     </li>
-    <li>
-      <div class="copy">
-        <h4>American Film Institute</h4>
-        <h5>Does Not Have Class LA</h5>
-      </div>
-      <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
-    </li>
-    <li data-location="LA">
-      <div class="copy">
-        <h4>American Film Institute</h4>
-        <h5>Has Class LA</h5>
-      </div>
-      <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
-    </li>
-    <li data-location="NY">
-      <div class="copy">
-        <h4>American Film Institute</h4>
-        <h5>Has Class NY</h5>
-      </div>
-      <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
-    </li>
-    <li>
-      <div class="copy">
-        <h4>American Film Institute</h4>
-        <h5>AFI Directing Workshop for Women (AFI DWW)</h5>
-      </div>
-      <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
-    </li>
-    <li>
-      <div class="copy">
-        <h4>American Film Institute</h4>
-        <h5>AFI Directing Workshop for Women (AFI DWW)</h5>
-      </div>
-      <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
-    </li>
-
   </ul>
 
   </div>
