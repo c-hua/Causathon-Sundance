@@ -17,6 +17,7 @@
 //= require angular-animate
 //= require angular-resource
 //= require_tree .
+//= filtrify.min
 
 $(function() {
 	// Sub Nav

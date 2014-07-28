@@ -10,6 +10,10 @@ var resourceApp = angular.module('resource-app', ['ngResource', 'mm.foundation']
 		defaults.common['Accept'] = 'application/json';
 }]);
 
+// resourceApp.filter("byCategory", function(){
+//	return function()
+// });
+
 resourceApp.factory('User', ['$resource', function($resource) {
 	return $resource('/users/:id',
 		{id: '@id'},
@@ -31,6 +35,20 @@ resourceApp.factory('Resource', ['$resource', function($resource) {
 // the controller determines what functions to permit and defines its variables.
 resourceApp.controller('ResourceCtrl', ['$scope', 'Resource', 
 	function($scope, Resource) {
+	// Every possible category
+	$scope.categories = ["Funding/In Kind","Networking and Community","Mentorships and Fellowships","Research/Archives","Education: Worskshops / Speakers / Training / Labs / Master Classes","Shadowing","Project Markets and Pitching Forums","Screenings and Festivals","Committees and Advocacy","Artist/Resource Lists","Fiscal Sponsorship","Publications, Blogs, Newsletters","Distribution","Production Company"];
+
+	// test
+	$scope.tests =
+[
+    {
+        "ID": 1,
+        "Organization": "Alliance of Women Directors",
+        "Category": ["Networking and Community", "Screenings and Festivals"],
+        "Gender": "Women",
+        "URL": "http://www.allianceofwomendirectors.org/"
+    }
+]
 	// the app begins with an empty array
 	$scope.resources= [];
 	//the app creates a new resource within the array.

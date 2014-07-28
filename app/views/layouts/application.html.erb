@@ -28,20 +28,8 @@
     <div id="sidebar">
       <h3>Categories</h3>
       <ul>
-        <li><a href="#">Funding/In Kind</a></li>
-        <li><a href="#">Networking and Community</a></li>
-        <li><a href="#">Mentorships and Fellowships</a></li>
-        <li><a href="#">Research/Archives</a></li>
-        <li><a href="#">Education: Worskshops / Speakers / Training / Labs / Master Classes</a></li>
-        <li><a href="#">Shadowing</a></li>
-        <li><a href="#">Project Markets and Pitching Forums</a></li>
-        <li><a href="#">Screenings and Festivals</a></li>
-        <li><a href="#">Committees and Advocacy</a></li>
-        <li><a href="#">Artist/Resource Lists</a></li>
-        <li><a href="#">Fiscal Sponsorship</a></li>
-        <li><a href="#">Publications, Blogs, Newsletters</a></li>
-        <li><a href="#">Distribution</a></li>
-        <li><a href="#">Production Company</a></li>
+        <!-- <li ng-repeat="cat in categories"><a href="#">{{cat}}</a></li> -->
+        <li ng-repeat="t in tests"><a href="#"><div x-ng-repeat="c in Category">{{c}}</div></a></li>
       </ul>
     </div>
   
@@ -75,9 +63,9 @@
               <!-- Left Nav Section -->
               <ul class="left white">
 
-                  <li>
+                  <li data->
                       <!-- this is the about page pop up bow below -->
-                      <a href="#" class="nblink" data-reveal-id="myModal"><strong>About</strong></a>
+                      <a href="#" class="blink" data-reveal-id="myModal"><strong>About</strong></a>
                       <div id="myModal" class="reveal-modal" data-reveal>
                       <h2>sundance </h2>
                       <a class="close-reveal-modal">&#215;</a>
@@ -142,8 +130,8 @@
               </ul>
         </section>
   </nav>
-  <ul class="organizations">
-    <li class="LA">
+  <ul id="organizations">
+    <li data-location="LA">
       <div class="copy">
         <h4>American Film Institute</h4>
         <h5>Has Class LA</h5>
@@ -157,14 +145,14 @@
       </div>
       <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
     </li>
-    <li class="LA">
+    <li data-location="LA">
       <div class="copy">
         <h4>American Film Institute</h4>
         <h5>Has Class LA</h5>
       </div>
       <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">
     </li>
-    <li class="NY">
+    <li data-location="NY">
       <div class="copy">
         <h4>American Film Institute</h4>
         <h5>Has Class NY</h5>
