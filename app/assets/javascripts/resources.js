@@ -78,7 +78,7 @@ resourceApp.controller('ResourceCtrl', ['$scope', 'Resource',
     {
         "id": 2,
         "organization": "Alliance of Women Directors",
-        "categories": ["Shadowing", "Screenings and Festivals"],
+        "categories": ["Shadowing", "Screenings and Festivals" ,"Funding/In Kind","Production Company"],
         "program": "AWD Seminars",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
@@ -86,7 +86,7 @@ resourceApp.controller('ResourceCtrl', ['$scope', 'Resource',
     {
         "id": 3,
         "organization": "Athena Film Festival",
-        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals", "Research/Archives","Distribution"],
         "program": "Athena List",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
@@ -102,7 +102,7 @@ resourceApp.controller('ResourceCtrl', ['$scope', 'Resource',
     {
         "id": 5,
         "organization": "Chicken & Egg Pictures",
-        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals", "Mentorships and Fellowships"],
         "program": "Grantee-Only Mentorship",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
@@ -110,7 +110,7 @@ resourceApp.controller('ResourceCtrl', ['$scope', 'Resource',
     {
         "id": 6,
         "organization": "HBOAccess",
-        "categories": ["Committees and Advocacy"],
+        "categories": ["Committees and Advocacy", "Fiscal Sponsorship"],
         "program": "Storyteller Program",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
@@ -118,7 +118,7 @@ resourceApp.controller('ResourceCtrl', ['$scope', 'Resource',
     {
         "id": 7,
         "organization": "Creative Capital",
-        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "categories": ["Publications, Blogs, Newsletters"],
         "program": "Award Program",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
@@ -126,7 +126,7 @@ resourceApp.controller('ResourceCtrl', ['$scope', 'Resource',
     {
         "id": 8,
         "organization": "Film Independent",
-        "categories": ["Networking and Community", "Screenings and Festivals"],
+        "categories": ["Networking and Community"],
         "program": "Project Involve",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
@@ -134,7 +134,7 @@ resourceApp.controller('ResourceCtrl', ['$scope', 'Resource',
     {
         "id": 9,
         "organization": "IFP",
-        "categories": ["Education: Worskshops / Speakers / Training / Labs / Master Classes"],
+        "categories": ["Education: Worskshops / Speakers / Training / Labs / Master Classes","Artist/Resource Lists"],
         "program": "Fiscal Sponsorship",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
