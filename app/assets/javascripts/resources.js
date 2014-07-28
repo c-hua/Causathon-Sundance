@@ -69,10 +69,10 @@ resourceApp.controller('ResourceCtrl', ['$scope', 'Resource',
 
 	$scope.organizations = [{
         "id": 1,
-        "organization": "Alliance of Women Directors",
-        "categories": ["Networking and Community", "Shadowing"],
+        "organization": "American Film Institute",
+        "categories": ["Mentors and Felloships", "Education: Workshops/Speakers/Training"],
         "gender": "Women",
-        "url": "http://www.allianceofwomendirectors.org/"
+        "url": "http://afi.com/dww"
     },
     {
         "id": 2,
@@ -87,7 +87,51 @@ resourceApp.controller('ResourceCtrl', ['$scope', 'Resource',
         "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
-    }];
+    },
+    {
+        "id": 4,
+        "organization": "fdasd",
+        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "gender": "Women",
+        "url": "http://www.allianceofwomendirectors.org/"
+    },
+    {
+        "id": 5,
+        "organization": "fdasd",
+        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "gender": "Women",
+        "url": "http://www.allianceofwomendirectors.org/"
+    },
+    {
+        "id": 6,
+        "organization": "fdasd",
+        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "gender": "Women",
+        "url": "http://www.allianceofwomendirectors.org/"
+    },
+    {
+        "id": 7,
+        "organization": "fdasd",
+        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "gender": "Women",
+        "url": "http://www.allianceofwomendirectors.org/"
+    },
+    {
+        "id": 8,
+        "organization": "fdasd",
+        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "gender": "Women",
+        "url": "http://www.allianceofwomendirectors.org/"
+    },
+    {
+        "id": 9,
+        "organization": "fdasd",
+        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "gender": "Women",
+        "url": "http://www.allianceofwomendirectors.org/"
+    }
+
+    ];
 	// the app begins with an empty array
 	$scope.resources= [];
 	//the app creates a new resource within the array.
