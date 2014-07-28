@@ -130,8 +130,8 @@
   <ul id="organizations">
     <li data-location="LA" ng-repeat="o in organizations | myOrgs:categories track by $index">
       <div class="copy">
-        <h4>{{o.organization}}</h4>
-        <h5>Has Class LA</h5>
+        <h4><a href="{{o.url}}" target="_blank">{{o.organization}}</a></h4>
+        <h5>{{o.program}}</h5>
       </div>
       <img src="<%= asset_path( 'logos/film.png' ) %>">
     </li>

@@ -70,63 +70,72 @@ resourceApp.controller('ResourceCtrl', ['$scope', 'Resource',
 	$scope.organizations = [{
         "id": 1,
         "organization": "American Film Institute",
-        "categories": ["Mentors and Felloships", "Education: Workshops/Speakers/Training"],
+        "categories": ["Mentors and Fellowships", "Education: Workshops/Speakers/Training"],
+        "program": "AFI Directing Workshop",
         "gender": "Women",
         "url": "http://afi.com/dww"
     },
     {
         "id": 2,
-        "organization": "as;ldkfjaskdlf",
+        "organization": "Alliance of Women Directors",
         "categories": ["Shadowing", "Screenings and Festivals"],
+        "program": "AWD Seminars",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
     },
     {
         "id": 3,
-        "organization": "fdasd",
+        "organization": "Athena Film Festival",
         "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "program": "Athena List",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
     },
     {
         "id": 4,
-        "organization": "fdasd",
-        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "organization": "CBS",
+        "categories": ["Project Markets and Pitching Forums", "Screenings and Festivals"],
+        "program": "CBS Directing Initiative",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
     },
     {
         "id": 5,
-        "organization": "fdasd",
+        "organization": "Chicken & Egg Pictures",
         "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "program": "Grantee-Only Mentorship",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
     },
     {
         "id": 6,
-        "organization": "fdasd",
-        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "organization": "HBOAccess",
+        "categories": ["Committees and Advocacy"],
+        "program": "Storyteller Program",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
     },
     {
         "id": 7,
-        "organization": "fdasd",
+        "organization": "Creative Capital",
         "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "program": "Award Program",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
     },
     {
         "id": 8,
-        "organization": "fdasd",
-        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "organization": "Film Independent",
+        "categories": ["Networking and Community", "Screenings and Festivals"],
+        "program": "Project Involve",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
     },
     {
         "id": 9,
-        "organization": "fdasd",
-        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "organization": "IFP",
+        "categories": ["Education: Worskshops / Speakers / Training / Labs / Master Classes"],
+        "program": "Fiscal Sponsorship",
         "gender": "Women",
         "url": "http://www.allianceofwomendirectors.org/"
     }
