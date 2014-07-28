@@ -27,11 +27,11 @@
     <div id="sidebar">
       <h3>Categories</h3>
       <ul>
-        <!-- <li ng-repeat="cat in categories"><a href="#">{{cat}}</a></li> -->
-        <li ng-repeat="t in tests">
-          <a href="#" class="nest" ng-repeat="cat in t.Categories">{{cat.Category}}</a>
+        <li x-ng-repeat="cat in categories"><input type="checkbox" x-ng-model="cat.selected"> {{cat.name}}</a></li>
+<!--         <li ng-repeat="o in organizations">
+          <a href="#" class="nest" ng-repeat="cat in o.Categories">{{cat.Category}}</a>
         </li>
-      </ul>
+ -->      </ul>
     </div>
 
     <div id="body">
@@ -132,9 +132,9 @@
         </section>
   </nav>
   <ul id="organizations">
-    <li data-location="LA" ng-repeat="t in tests">
+    <li data-location="LA" ng-repeat="o in organizations | myOrgs:categories track by $index">
       <div class="copy">
-        <h4>{{t.Organization}}</h4>
+        <h4>{{o.organization}}</h4>
         <h5>Has Class LA</h5>
       </div>
       <img src="<%= asset_path( 'logos/AFI_Four_Color.svg' ) %>">

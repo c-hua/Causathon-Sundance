@@ -32,58 +32,62 @@ resourceApp.factory('Resource', ['$resource', function($resource) {
 		{update: { method: 'PATCH'}});
 }]);
 
+resourceApp.filter('myOrgs', function(){ return function(orgs, cats){
+		var isAtLeastOneSelected = false;
+		for(var k in cats){
+			if(cats[k].selected)
+				isAtLeastOneSelected = true;
+		}
+		if(!isAtLeastOneSelected)
+			return orgs;
+
+		var filtered = [];
+		for(var i in orgs){
+			var org = orgs[i];
+			var isFound = false;
+			for(var j in org.categories){
+				for(var k in cats){
+					if(org.categories[j] == cats[k].name && cats[k].selected)
+					{
+						filtered.push(org);
+						isFound = true;
+						break;
+					}
+				}
+				if(isFound)
+					break;
+			}
+		}
+		return filtered;
+	};
+});
 // the controller determines what functions to permit and defines its variables.
 resourceApp.controller('ResourceCtrl', ['$scope', 'Resource', 
 	function($scope, Resource) {
 	// Every possible category
-	$scope.categories = ["Funding/In Kind","Networking and Community","Mentorships and Fellowships","Research/Archives","Education: Worskshops / Speakers / Training / Labs / Master Classes","Shadowing","Project Markets and Pitching Forums","Screenings and Festivals","Committees and Advocacy","Artist/Resource Lists","Fiscal Sponsorship","Publications, Blogs, Newsletters","Distribution","Production Company"];
+	$scope.categories = [{name:"Funding/In Kind", selected:false},{name:"Networking and Community", selected:false},{name:"Mentorships and Fellowships", selected:false},{name:"Research/Archives", selected:false},{name:"Education: Worskshops / Speakers / Training / Labs / Master Classes", selected:false},{name:"Shadowing", selected:false},{name:"Project Markets and Pitching Forums", selected:false},{name:"Screenings and Festivals", selected:false},{name:"Committees and Advocacy", selected:false},{name:"Artist/Resource Lists", selected:false},{name:"Fiscal Sponsorship", selected:false},{name:"Publications, Blogs, Newsletters", selected:false},{name:"Distribution", selected:false},{name:"Production Company",selected:false}];
 
-	// test
-	$scope.tests =
-[
-    {
-        "ID": 1,
-        "Organization": "Alliance of Women Directors",
-        "Categories": [
-            {
-                "Category": "Networking and Community"
-            },
-            {
-                "Category": "Screenings and Festivals"
-            }
-        ],
-        "Gender": "Women",
-        "URL": "http://www.allianceofwomendirectors.org/"
+	$scope.organizations = [{
+        "id": 1,
+        "organization": "Alliance of Women Directors",
+        "categories": ["Networking and Community", "Shadowing"],
+        "gender": "Women",
+        "url": "http://www.allianceofwomendirectors.org/"
     },
     {
-        "ID": 2,
-        "Organization": "as;ldkfjaskdlf",
-        "Categories": [
-            {
-                "Category": "test"
-            },
-            {
-                "Category": "Screenings and Festivals"
-            }
-        ],
-        "Gender": "Women",
-        "URL": "http://www.allianceofwomendirectors.org/"
+        "id": 2,
+        "organization": "as;ldkfjaskdlf",
+        "categories": ["Shadowing", "Screenings and Festivals"],
+        "gender": "Women",
+        "url": "http://www.allianceofwomendirectors.org/"
     },
     {
-        "ID": 3,
-        "Organization": "fdasd",
-        "Categories": [
-            {
-                "Category": "test"
-            },
-            {
-                "Category": "Screenings and Festivals"
-            }
-        ],
-        "Gender": "Women",
-        "URL": "http://www.allianceofwomendirectors.org/"
-    }
-]
+        "id": 3,
+        "organization": "fdasd",
+        "categories": ["Publications, Blogs, Newsletters", "Screenings and Festivals"],
+        "gender": "Women",
+        "url": "http://www.allianceofwomendirectors.org/"
+    }];
 	// the app begins with an empty array
 	$scope.resources= [];
 	//the app creates a new resource within the array.
