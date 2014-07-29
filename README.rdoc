@@ -12,8 +12,8 @@ Our back-end was built on Ruby on Rails, and our database and modeling were buil
 
 
 Team Members:
-Christie Hua, Matt Billings, Jeffrey Brick & Courtney Clinch.
+Christie Hua, Matt Billings, Jeffrey Brick & Catherine Clinch.
 
 Special Thanks to:
-June Kim & Jessica P.L.
+June Kim & Jess Kantor.
 
