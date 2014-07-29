@@ -1,6 +1,12 @@
 class SessionsController < ApplicationController
+
+    def index
+    @users = User.all
+  end
+
  def new
   end
+  
  def create
     @user = User.where(:email => params[:session][:email]).first
 

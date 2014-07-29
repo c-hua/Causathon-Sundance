@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   resources :resources
 
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions
   resources :users
     resources :resources
+
+  # get 'sessions#new' 
+# get 'sessions/create' => 'sessions#create'
 
 
 

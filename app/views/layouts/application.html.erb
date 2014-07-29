@@ -101,7 +101,7 @@
               <ul class="right">
                 <% if !current_user %>
                   <li>
-                    <a href="#" data-reveal-id="myModal3"><strong>Sign In</strong></a>
+                    <%= link_to "Sign In", sessions_path, :method => :post %>
                       <div id="myModal3" class="reveal-modal" data-reveal>
                         <%= render :partial => 'sessions/new' %>
                         <a class="close-reveal-modal">&#215;</a>
@@ -112,7 +112,7 @@
                 <% if !current_user %>
 
                   <li>
-                    <a href="#" data-reveal-id="myModal6"><strong>Sign Up</strong></a>
+                    <a href="users#index" data-reveal-id="myModal6"><strong>Sign Up</strong></a>
                     <div id="myModal6" class="reveal-modal" data-reveal>
                       <%= render :partial => 'users/new' %>
                       <a class="close-reveal-modal">&#215;</a>
