@@ -1,8 +1,15 @@
 SUNDANCE Women Filmmakers Database for Brand New's Causathon at General Assembly.
 
+Built with Ruby on Rails, PostgreSQL, Angular.js, Zurb Foundation, jQuery, Javascript, SASS, and BCrypt. 
+
 July 27, 2014
 
-Built with Ruby on Rails, PostgreSQL, Angular.js, Zurb Foundation, jQuery, Javascript, HTML/CSS, and BCrypt. 
+Our goal for Sundance was to create a filterable user-friendly mobile database to give female filmmakers the opportunity to look at the resources, organizations & events available to them. The Sundance Institute wanted this application focuses on female filmmakers due to their undervalued presence in the film industry. 
+
+Our site filter, built in ANGULAR.JS, works to sort out the organizations by opportunities that they offer, such as networking, festivals, and internships.
+
+Our back-end was built on Ruby on Rails, and our database and modeling were built with PostgreSQL. Front-end was built with Angular.js, Zurb Foundation, jQuery, Javascript & HTML/Sass. 
+
 
 Team Members:
 Christie Hua, Matt Billings, Jeffrey Brick & Courtney Clinch.
