@@ -1,4 +1,4 @@
-SUNDANCE Women Filmmakers Database for Brand New's Causathon at General Assembly.
+SUNDANCE Women Filmmakers Database - Brand New's Causathon at General Assembly.
 
 Built with Ruby on Rails, PostgreSQL, Angular.js, Zurb Foundation, jQuery, Javascript, SASS, and BCrypt. 
 
