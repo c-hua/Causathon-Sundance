@@ -112,7 +112,7 @@
                 <% if !current_user %>
 
                   <li>
-                    <a href="users#index" data-reveal-id="myModal6"><strong>Sign Up</strong></a>
+                   <%= link_to "Sign Up", new_user_path, :method => :get %>
                     <div id="myModal6" class="reveal-modal" data-reveal>
                       <%= render :partial => 'users/new' %>
                       <a class="close-reveal-modal">&#215;</a>
